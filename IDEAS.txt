@@ -1,0 +1,16 @@
+Firebug on Rails:
+
+USAGE:
+  FireBug::log(msg)
+  FireBug::warn(msg)
+  FireBug::error(msg)
+  FireBug::debug(var, *opts)
+
+    =>
+      console.info('%s: %s', var name, var.class_name)
+      console.open_group();
+      var.args.each do |arg|
+        console.info('%s (%s) %s', arg name, arg.class_name, var);
+      end
+      console.end_group();
+      
